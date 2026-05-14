@@ -6,7 +6,7 @@ import type { FormEvent } from 'react'
 
 
 /* tipando os dados da api, pois o ts não sabe o que vem, sem isso ele imagina 'any' */
-interface Coinprop {
+export interface Coinprop {
   id: string,
   rank: string,
   symbol: string,
@@ -45,6 +45,7 @@ const Home = () => {
 
     navigate(`/detail/${input}`)
   }
+
   /* atualiza a cada offset alterado*/
   useEffect(() => {
     getData();
@@ -96,7 +97,7 @@ const Home = () => {
   const handleGetMore = () => {
     setOffSet(prev => prev + 10)
   }
-  
+
 
   return (
     <main className={styles.container} >
@@ -150,10 +151,11 @@ const Home = () => {
 
         </tbody>
       </table>
-
-      <button className={styles.buttonMore} onClick={handleGetMore}>
-        Carregar mais
-      </button>
+      <div className={styles.btn}>
+        <button className={styles.buttonMore} onClick={handleGetMore}>
+          Carregar mais
+        </button>
+      </div>
 
     </main>
   )
