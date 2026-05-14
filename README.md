@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+🚀 CryptoApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Aplicação web desenvolvida em React + TypeScript para visualização de criptomoedas em tempo real utilizando a API da CoinCap.
 
-Currently, two official plugins are available:
+- O projeto permite navegar entre ativos, visualizar detalhes específicos de cada criptomoeda e carregar novos resultados dinamicamente através de paginação.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+📸 Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+  <div align='center'>
+  <img src="./src/assets/home.png" width="30%"/>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  <img src="./src/assets/details.png" width="30%"/>
+  </div>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🛠️ Tecnologias utilizadas
+- React
+- TypeScript
+- Vite
+- React Router DOM
+- CSS Modules
+- CoinCap API
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+⚡ Funcionalidades
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+✅ Listagem dinâmica de criptomoedas
+✅ Paginação utilizando offset
+✅ Botão “Carregar mais”
+✅ Página de detalhes para cada moeda
+✅ Rotas dinâmicas com React Router
+✅ Formatação de valores monetários
+✅ Tratamento de rotas inválidas
+✅ Responsividade
+✅ Componentização da interface
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🧠 Conceitos praticados
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Durante o desenvolvimento do projeto foram aplicados conceitos importantes do ecossistema React:
+
+- useState
+- useEffect
+- Rotas dinâmicas
+- Consumo de API REST
+- Paginação com offset
+- Manipulação de estados
+- Tipagem com TypeScript
+- Imutabilidade
+- Componentização
+- CSS Modules
+- Renderização dinâmica
+- Formatação de dados
+
+🔗 API utilizada
+CoinCap API
+
+📈 Aprendizados
+
+Este foi meu primeiro projeto desenvolvido utilizando TypeScript com React.
+
+O principal objetivo foi consolidar conceitos importantes como:
+- tipagem de estados e propriedades
+- consumo de APIs
+- rotas dinâmicas
+- paginação
+- componentização
+- manipulação de dados
+
+Durante o desenvolvimento, consegui aprofundar meus conhecimentos em React moderno e melhorar minha organização de código utilizando TypeScript.
