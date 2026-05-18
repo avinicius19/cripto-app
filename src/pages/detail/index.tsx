@@ -83,7 +83,7 @@ const Detail = () => {
       <section className={styles.content}>
         <img src={`https://assets.coincap.io/assets/icons/${coin?.symbol.toLocaleLowerCase()}@2x.png`} alt="Logo da moeda" className={styles.logo} />
 
-        <h1>{coin?.name}  {coin?.symbol}</h1>
+        <h1>{coin?.name} | {coin?.symbol}</h1>
         <p><strong>Preço: </strong>{coin?.formatedPrice}</p>
         <a><strong>Mercado: </strong>{coin?.formatedMarket}</a>
         <a><strong>Volume: </strong>{coin?.formatedVolume}</a>

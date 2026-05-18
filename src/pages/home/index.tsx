@@ -2,10 +2,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from './home.module.css'
 import { BsSearch } from "react-icons/bs";
 import { useState, useEffect } from 'react';
-import type { FormEvent } from 'react'
 
 
-/* tipando os dados da api, pois o ts não sabe o que vem, sem isso ele imagina 'any' */
+/*  cada moeda da API */
 export interface Coinprop {
   id: string,
   rank: string,
@@ -24,7 +23,7 @@ export interface Coinprop {
   formatedVolume?: string
 }
 
-/* passando os dados como devem ser para o data */
+/* é o objeto completo da API*/
 interface DataProp {
   data: Coinprop[]
 }
@@ -33,7 +32,7 @@ interface DataProp {
 const Home = () => {
 
   const [input, setInput] = useState('');
-  /* especifica como o array vem, mas NÃO passa os dados para ele */
+  /* coins contem a moeda e toda as caracteristicas que tem em Coinprop */
   const [coins, setCoins] = useState<Coinprop[]>([]);
   const [offset, setOffSet] = useState(0);
 
